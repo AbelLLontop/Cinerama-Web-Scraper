@@ -5,7 +5,7 @@ import { MoviesService } from "@/services/MoviesService";
 
 export default async function Home() {
   const movieService = new MoviesService();
-  const movies = await movieService.getAndSaveAllMoviesByScraper();
+  const movies = await movieService.getMovies();
 
   return (
     <main className="container mx-auto py-8">

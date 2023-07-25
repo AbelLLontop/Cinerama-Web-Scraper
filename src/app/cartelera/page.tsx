@@ -1,15 +1,14 @@
 import { ItemText } from "@/components/BannerMovie";
 import { IconMovie } from "@/components/Icons";
-import { MdDateRange } from "react-icons/md";
-import React from "react";
 import ListMovies from "@/components/ListMovies";
 import { MoviesService } from "@/services/MoviesService";
 import Image from "next/image";
+import { IMovie } from "@/models/movie";
 
 
 export default async function CarteleraPage () {
   const movieService = new MoviesService();
-  const movies = await movieService.getAndSaveAllMoviesByScraper();
+  const movies:IMovie[] = await JSON.parse(JSON.stringify(await movieService.getMovies()));
   return (
     <div className="container mx-auto">
       <div className="my-4 flex items-center gap-16 justify-between">

@@ -11,12 +11,15 @@ export default async function CarteleraPage () {
   const movieService = new MoviesService();
   const movies = await movieService.getAndSaveAllMoviesByScraper();
   return (
-    <div className="container mx-auto pt-8">
+    <div className="container mx-auto">
+      <div className="my-8">
       <ItemText
-        title={<h1 className="text-2xl font-bold">Peliculas en Cartelera</h1>}
+        title={<h1 className="text-2xl font-bold">Cartelera Chimbote</h1>}
         icon={<IconMovie />}
         value={<span>Colleccion de Peliculas</span>}
       />
+
+      </div>
      <ListMovies movies={movies}/>
     </div>
   );

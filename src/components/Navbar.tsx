@@ -42,18 +42,7 @@ const Navbar = () => {
     
             
           </li>
-          {/* <li
-            className={`flex  items-center gap-1 cursor-pointer
-            text-sm
-            hover:text-white
-            ${isActive('/proximos-estrenos') ? 'text-white  ' : ''}            
-          `}
-          onClick={() => router.push('/proximos-estrenos')}
-          >
-            <MdLocalMovies size={20} className="flex-shrink-0" />
-     Proximos Estrenos
-            
-          </li> */}
+
           <li
             className={`flex  items-center gap-1 cursor-pointer
              text-sm
@@ -68,20 +57,7 @@ const Navbar = () => {
 
             
           </li>
-          {/* <li
-            className={`flex  items-center gap-1 cursor-pointer
-             text-sm
-             hover:text-white
-            ${isActive('/peliculas') ? 'text-white  ' : ''}      
-          `}
-          onClick={() => router.push('/peliculas')}
-          >
    
-            <MdLocalMovies size={20} className="flex-shrink-0" />
-            Peliculas
-
-            
-          </li> */}
         </ul>
      
       </div>

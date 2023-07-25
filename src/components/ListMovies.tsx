@@ -3,6 +3,7 @@
 import { parseSlug } from "@/utils/parseSlug";
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { MdDateRange } from "react-icons/md";
 const capitalizeFirstLetter = (str: any) => {
     return str.charAt(0).toUpperCase() + str.slice(1).toLowerCase();
@@ -19,21 +20,19 @@ const capitalizeFirstLetter = (str: any) => {
     return fechaPersonalizada;
   };
 const ItemMovie = ({ movie }: any) => {
-
   return (
     <div className="flex gap-4">
       <div>
-      <div className="flex gap-1 items-center font-bold">
-          <MdDateRange size={20} />
-          {parseFecha(movie.fechaEstreno)}
-        </div>
-        <div
+     
+        <Link
+         href={`/peliculas/${parseSlug(movie.title)}`}
         style={{
           width: '200px',
           height: '300px'
         }}
         className=" bg-purple-600 rounded-md
         hover:shadow-lg
+        group
         cursor-pointer
         ">
           
@@ -42,13 +41,19 @@ const ItemMovie = ({ movie }: any) => {
             width={200}
             height={600}
             src={movie.extra.poster_path}
-            className="rounded-md"
+            className="rounded-md
+            group-hover:opacity-80
+
+            "
             objectFit="none"
           />
-        </div>
+        </Link>
         <div >
         <h3 className="font-bold">{movie.title}</h3>
-    
+        <div className="flex gap-1 items-center font-bold">
+          <MdDateRange size={20} />
+          {parseFecha(movie.fechaEstreno)}
+        </div>
         <div className="text-gray-700 text-sm">Duracion</div>
         <div className="font-bold">{movie.duracion}</div>
        

@@ -28,7 +28,7 @@ export default async function DetallePeliculaPage({ params }: any) {
       {/* {movies.map((movie) => ( <BannerMovie movie={movie} key={movie._id} />))} */}
       <BannerMovie movie={searchMovie}  />
       <YoutubeComponent movie={searchMovie} />
-      <div className="container mx-auto my-20">
+      <div className="container my-20">
 
       <ItemText
         title={<h3 className="text-xl font-bold">Otros Estrenos</h3>}

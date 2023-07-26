@@ -1,11 +1,7 @@
 'use client'
-import Image from "next/image";
 import React from "react";
-import { HiLocationMarker } from "react-icons/hi";
-import { PiPopcornFill } from "react-icons/pi";
 import { DuracionIcon, EstrenoIcon, IconMovie } from "./Icons";
 import { BiSolidCameraMovie } from "react-icons/bi";
-import { GrValidate } from "react-icons/gr";
 import { PiSealCheckFill } from "react-icons/pi";
 
 export const ItemText = ({
@@ -71,7 +67,7 @@ const BannerMovie = ({ movie }: any) => {
 
       }
     }>
-      <div className=" container grid grid-cols-2 gap-8 mx-auto py-20">
+      <div className=" container grid grid-cols-2 gap-8 py-20">
         <div className="max-w-[36rem]">
           <h1 className="text-4xl font-bold">{movie.title}</h1>
           <p className="my-3">{capitalizeFirstLetter(movie.sinopsis)}</p>

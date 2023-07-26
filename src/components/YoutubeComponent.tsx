@@ -29,7 +29,7 @@ const YoutubeComponent = ({ movie }: any) => {
   const existTrailer = movie?.extra?.trailer?.key;
   return (
     <div className="bg-white">
-      <div className="container mx-auto">
+      <div className="container">
         <div className="mb-3 flex items-center">      
         <ItemText
         title={<h2 className="text-2xl font-bold">

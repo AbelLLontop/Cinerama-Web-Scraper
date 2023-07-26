@@ -1,12 +1,6 @@
 "use client";
-import { FaTiktok, FaFacebookF } from "react-icons/fa";
 import { PiPopcornFill } from "react-icons/pi";
-import { HiLocationMarker } from "react-icons/hi";
-import { IoIosArrowDroprightCircle } from "react-icons/io";
-import { BiSolidMoviePlay } from "react-icons/bi";
 import { MdLocalMovies } from "react-icons/md";
-import { useEffect, useRef, useState } from "react";
-import Image from "next/image";
 import { usePathname, useRouter } from 'next/navigation'
 import Link from "next/link";
 
@@ -17,7 +11,7 @@ const Navbar = () => {
   return (
     <div className="bg-blue-600 text-blue-200   sticky top-0 duration-100 z-10">
      
-    <nav className={`container mx-auto `}>
+    <nav className="container">
       <div className="grid grid-cols-[auto,1fr,auto] py-2 gap-8">
         
         <div className="text-xl font-bold text-white px-2 rounded-md py-2">

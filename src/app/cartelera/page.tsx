@@ -10,7 +10,7 @@ export default async function CarteleraPage () {
   const movieService = new MoviesService();
   const movies:IMovie[] = await JSON.parse(JSON.stringify(await movieService.getMovies()));
   return (
-    <div className="container mx-auto">
+    <div className="container">
       <div className="my-4 flex items-center gap-16 justify-between">
       <ItemText
         title={<h1 className="text-2xl font-bold">Cartelera Chimbote</h1>}
